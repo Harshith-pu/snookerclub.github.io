@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Que Clubs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,500;0,700;1,100;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/6355293fed.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<!-------------------------------Heading section----------------------------------------->
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-x" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="tables.html">Tables</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+       <h1>Contact Us</h1>
+    </section>
+
+
+
+
+
+<!--------------------------------location of the coaching center and contact info------------------------------------->
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.943995379217!2d77.520502!3d12.9113211!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f5e7925b5c7%3A0xeb95719046ef2348!2sThe%20Que%20Club%20-%20Snooker%20Point!5e0!3m2!1sen!2sin!4v1689672125521!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <section class="contact-us">
+            <div class="row">
+                <div class="contact-col">
+                   <div>
+                    <i class="fa-solid fa-house"></i>
+                    <span>
+                        <h5>The Que Club - Snooker Point</h5>
+                        <p>695, 1st Floor, 4th Stage, 6th Main Rd, BEML Layout, Rajarajeshwari Nagar, Bengaluru, Karnataka 560098</p>
+                    </span>
+                   </div>
+                   <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>
+                        <h5>+91 7760853192</h5>
+                        <p>All Days 10AM to 11PM</p>
+                    </span>
+                   </div>
+                   <div>
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>
+                        <h5>thequeclub369@gmail.com</h5>
+                        <p>Email your query</p>
+                    </span>
+                   </div>
+                </div>
+                <div class="contact-col input" >
+                    <form onsubmit="sendEmail(); reset(); return false;">
+                        <h3>Send Feedback</h3>
+                        <input type="text" id="name" placeholder="your name" required>
+                        <input type="email" id="email" placeholder="Email id" required>
+                        <input type="text" id="phone" placeholder="phone no" required>
+                        <textarea id="message"  rows="4" placeholder="how can we help you?"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            
+            </div>
+        </section>
+    </section>
+
+   <script>
+        var navLinks=document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right="0";
+
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+            
+        }
+    </script>  
+
+
+
+
+<!---------------------------------------email section-------------------------------------------------->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+           
+     Host :"smtp.gmail.com",
+     Username:"harshithguptha2002@gamil.com",
+     Password:"passwords",
+    To : 'harshithguptha2002@gamil.com.com',
+    From : document.getElementById("email").value,
+    Subject : "New contact form enquiry",
+    Body : "Name:"+document.getElementById("name").value
+    +"<br> Email:"+document.getElementById("name").value
+    +"<br> Phone No"+document.getElementById("phone").value
+    +"<br> Message:"+document.getElementById("message").value
+}).then(
+  message => alert("Message Sent Succesfully")
+);
+    }
+</script>
+
+    
+   
+   
+<!----------------------------------------------Footer section-----------------------------------------------------> 
+<section class="footer">
+    <h4>About us</h4>
+    <p>We Started this club in 2002. We provide the best facilites. We conduct so many Tournament. We also give the coaching </p>
+    <div class="icons">
+        
+       <a href ="https://instagram.com/the.queclub?igshid=Y2IzZGU1MTFhOQ==">
+         <i class="fa-brands fa-instagram"></i></a>
+         <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+    </div>
+    <p>The Que Club<i class="fa-solid fa-heart"></i>  </p>
+</section >
+<script>
+    var navLinks=document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right="0";
+
+    }
+    function hideMenu(){
+        navLinks.style.right="-200px";
+        
+    }
+</script>
+
+</body>
+</html>
+
